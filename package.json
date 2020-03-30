@@ -1,0 +1,17 @@
+{
+    "name": "travel-site",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "webpack"
+    },
+    "devDependencies": {
+        "autoprefixer": "^9.7.5",
+        "css-loader": "^3.4.2",
+        "postcss-loader": "^3.0.0",
+        "postcss-nested": "^4.2.1",
+        "postcss-simple-vars": "^5.0.2",
+        "style-loader": "^1.1.3",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11"
+    }
+}
