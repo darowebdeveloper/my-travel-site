@@ -1,11 +1,12 @@
 const path = require('path');
 
 const postCSSPlugins = [
-    require('postcss-import'),
-    require('postcss-mixins'),
-    require('autoprefixer'),
-    require('postcss-simple-vars'),
-    require('postcss-nested'),
+  require("postcss-import"),
+  require("postcss-mixins"),
+  require("autoprefixer"),
+  require("postcss-simple-vars"),
+  require("postcss-nested"),
+  require("postcss-hexrgba"),
 ];
 
 module.exports = {
