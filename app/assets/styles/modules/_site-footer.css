@@ -4,10 +4,12 @@
   padding: .5rem 0;
   text-align: center;
   &__text {
+    /* For new line for next element */
     display: block;
     margin-bottom: 1rem;
-    font-weight: lighter;
+    font-weight: lighter; 
     @mixin atMedium {
+      /* To compensate display block above */
       display: inline; 
       margin-bottom: 0;
       margin-right: 1.4rem;

@@ -5,6 +5,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #333333;
 }
+/* Make all images not exceed the browser width */
 img {
     max-width: 100%;
     height: auto;

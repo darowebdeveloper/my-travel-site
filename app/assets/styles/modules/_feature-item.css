@@ -1,14 +1,17 @@
 .feature-item {
-  
+  /* For position */
   position: relative;
   padding-bottom: 2.5rem;
   @mixin atSmall {
+    /* Give a left padding to creat space for child icon element */
     padding-left: 94px;
   }
   &__icon {
-    margin: 0 auto;
+    /* To center the icon horizontally with display and margin */
     display: block;
+    margin: 0 auto;
     @mixin atSmall {
+      /* To position icon to the left with padding-left of parent element => position: absolute and left: 0*/
       position: absolute;
       left: 0;
     }

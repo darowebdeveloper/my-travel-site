@@ -1,4 +1,5 @@
 .page-section {
+    /* For padding top and bottom for each sectoin */
     padding: 1.2rem 0;
     @mixin atMedium {
         padding: 4.5rem 0;
@@ -10,7 +11,9 @@
     &--testimonials {
         background-color: #e0e6ef;
         @mixin atLarge {
-            background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+            /* url just relative to the  directory without slash / if it is to work in many hosting env. */
+            background: url('assets/images/testimonials-bg.jpg') top center no-repeat;
+            /* To stretch the image to cover the containing div */
             background-size: cover;
         }
     }

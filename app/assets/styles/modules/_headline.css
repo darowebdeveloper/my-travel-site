@@ -26,6 +26,7 @@
         font-weight: normal;
     }
     &--b-maring-small {
+        /* Use em for margin for text  element cuz it's relative to font size of elem */
         margin-bottom: .5em;
     }
     &--b-margin-large {

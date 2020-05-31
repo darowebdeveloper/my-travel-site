@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
   <title>Clear View Escapes</title>
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes, airplanes">
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
@@ -13,12 +12,19 @@
     <div class="wrapper">
       <div class="site-header__logo">
         <img src="assets/images/icons/clear-view-escapes.svg">
+      </div> 
+      <!-- For create burger  menu icon use .site-header__menu-icon  -->
+      <div class="site-header__menu-icon">
+        <!-- Create a middle line of the burger icon -->
+        <div class="site-header__menu-icon__middle"></div>
       </div>
-      <div class="site-header__menu-icon"></div>
+      <!-- .site-header__menu-content  to hide the menu  below for  small  screen -->
       <div class="site-header__menu-content">
+        <!-- Wrap in this div to float it to the right -->
         <div class="site-header__btn-container">
           <a href="#" class="btn">Get in Touch</a>
         </div>
+        <!-- Use different name cuz BEM allows to nest block inside a block -->
         <nav class="primary-nav primary-nav--pull-right">
           <ul>
             <li><a href="#our-beginning">Our Beginning</a></li>
@@ -31,13 +37,18 @@
   </header>
 
   <div class="large-hero">
+    <!-- For art direction -->
     <picture>
+      <!-- For <source> can use media="(min-width: 1300px)"  and srcset="locatoin actual-size-in-w"-->
       <source media="(min-width: 1380px)" srcset="assets/images/hero--large.jpg 1920w, assets/images/hero--large-hi-dpi.jpg 3840w">
       <source media="(min-width: 990px)" srcset="assets/images/hero--medium.jpg 1380w, assets/images/hero--medium-hi-dpi.jpg 2760w">
       <source media="(min-width: 640px)" srcset="assets/images/hero--small.jpg 990w, assets/images/hero--small-hi-dpi.jpg 1980w">
+      <!-- Image <img /> can have  srcset -->
       <img class="large-hero__image" srcset="assets/images/hero--smaller.jpg 640w, assets/images/hero--smaller-hi-dpi.jpg 1280w" alt="Mountain off the ocean.">
     </picture>
+    <!-- This div to wrap all the tags using BEM -->
     <div class="large-hero__text-content">
+      <!-- To add  padding left and right  -->
       <div class="wrapper">
         <h1 class="large-hero__title">Your clarity.</h1>
         <h2 class="large-hero__subtitle">One trip away.</h2>
@@ -52,13 +63,18 @@
       <h2 class="headline headline--centered headline--b-margin-small headline--light">The first trip we planned <strong>was our own.</strong></h2>
       <h3 class="headline headline--centered headline--b-margin-large headline--light headline--orange headline--small headline--narrow">Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
       <div class="wrapper wrapper--medium wrapper--b-margin">
-        <img sizes="(min-width: 970px) 976px, 100vw" srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w, assets/images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
+        <!-- For resolution and size direction -->
+        <img sizes="(min-width: 970px) 976px, 100vw" srcset="assets/images/first-trip-low-res-i.jpg 565w, assets/images/first-trip-i.jpg 976w, assets/images/first-trip-hi-dpi-i.jpg 1952w" alt="Couple walking down a street.">
       </div>
       <div class="row row--gutters">
         <div class="row__medium-4 row__medium-4--larger row__b-margin-until-medium">
+          <!-- Art direction -->
           <picture>
-            <source sizes="404px" srcset="assets/images/our-start-i.jpg 404w, assets/images/our-start-hi-dpi-i.jpg 808w" media="(min-width: 1020px">
-            <source sizes="320px" srcset="assets/images/our-start-portrait-i.jpg 382w, assets/images/our-start-portrait-hi-dpi-i.jpg 764w" media="(min-width: 800px">
+            <!-- For responsive images all browsers will make  images full width, so use sizes to control the  partial width -->
+            <source sizes="404px" srcset="assets/images/our-start-i.jpg 404w, assets/images/our-start-hi-dpi-i.jpg 808w" media="(min-width: 1020px)">
+            <source sizes="320px" srcset="assets/images/our-start-portrait-i.jpg 382w, assets/images/our-start-portrait-hi-dpi-i.jpg 764w" media="(min-width: 800px)">
+            <!-- srcset for <img /> should be the  smallest first -->
+            <!-- We don't use  sizes  because  the images take full  width for small screen -->
             <img srcset="assets/images/our-start-landscape-i.jpg 800w, assets/images/our-start-landscape-hi-dpi-i.jpg 1600w" alt="Our founder, Mary Doe">
           </picture>
         </div>
@@ -89,24 +105,20 @@
         <img class="section-title__icon" src="assets/images/icons/star.svg">
         Our <strong>Features</strong>
       </h2>
-      <div class="row row--gutters-large">
+      <div class="row row--gutters-large generic-content-container">
         <div class="row__medium-6">
           <div class="feature-item">
             <img class="feature-item__icon" src="assets/images/icons/rain.svg">
             <h3 class="feature-item__title">We&rsquo;ll Watch the Weather</h3>
-            <div class="generic-content-container">
-              <p>Download our app and we&rsquo;ll send you a notice if it&rsquo;s about to rain in the next 20 minutes around your
+            <p>Download our app and we&rsquo;ll send you a notice if it&rsquo;s about to rain in the next 20 minutes around your
                 current location. A good rain can be refreshing, but sometimes you just want to stay dry.</p>
-            </div>
           </div>
           
           <div class="feature-item">
             <img class="feature-item__icon" src="assets/images/icons/globe.svg">
             <h3 class="feature-item__title">Global Guides</h3>
-            <div class="generic-content-container">
-              <p>We&rsquo;ve scoured the entire planet for the best retreats and beautiful vistas. If there&rsquo;s a corner of the
+            <p>We&rsquo;ve scoured the entire planet for the best retreats and beautiful vistas. If there&rsquo;s a corner of the
                 world you want to escape to we know the most scenic and inspiring locations.</p>
-            </div>
           </div>
         </div>
         <div class="row__medium-6">
@@ -130,16 +142,20 @@
       </div>
     </div>
   </div>
-
+  <!-- .page-section--no-b-padding-until-large for no padding bottom -->
   <div id="testimonials" class="page-section page-section--no-b-padding-until-large page-section--testimonials">
+    <!-- No padding for small screen and padding when large -->
     <div class="wrapper wrapper--no-padding-until-large">
       <h2 class="section-title section-title--blue">
         <img class="section-title__icon" src="assets/images/icons/comment.svg">
         Real <strong>Testimonials</strong>
       </h2>
+      <!-- Use row--equal-height-at-large to make the three column equal height using flex -->
       <div class="row row--gutters row--equal-height-at-large row--t-padding row--gutters-small generic-content-container">
         <div class="row__large-4">
+          <!-- For .testimonial block -->
           <div class="testimonial">
+            <!-- For circular image wrap img in side this div -->
             <div class="testimonial__photo">
               <img sizes="160px" srcset="assets/images/testimonial-jane.jpg 160w, assets/images/testimonial-jane-hi-dpi.jpg 320w" alt="Jane Doe">
             </div>
@@ -164,12 +180,13 @@
           </div>
         </div>
         <div class="row__large-4">
+          <!-- .testimonail--last to remove margin-bottom -->
           <div class="testimonial testimonial--last">
             <div class="testimonial__photo">
               <img sizes="160px" srcset="assets/images/testimonial-cat-i.jpg 160w, assets/images/testimonial-cat-hi-dpi-i.jpg 320w" alt="Cat">
             </div>
             <h3 class="testimonial__title">Cat McKitty</h3>
-            <h3 class="testimonial__subtitle">6 Time Escaper</h3>
+            <h4 class="testimonial__subtitle">6 Time Escaper</h4>
             <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem
               ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.&rdquo;</p>
@@ -187,6 +204,7 @@
       </p>
     </div>
   </footer>
+  <!-- Link to the bundled js file -->
   <script src="bundled.js"></script>
 </body>
 </html>

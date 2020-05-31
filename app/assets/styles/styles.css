@@ -1,3 +1,6 @@
+/* By configing webpack import here just replace css files not download other css files */
+/* By using npm i postcss-import --save-dev */
+/* No need to use ./ because install normalize by npm i normalize.css --save */
 @import 'normalize.css';
 @import './base/_variables';
 @import './base/_mixins.css';

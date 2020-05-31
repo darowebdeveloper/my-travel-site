@@ -1,22 +1,31 @@
 .testimonial {
   background-color: rgba(255,255,255,.8);
+  /* 1px bottom padding of the containing elem to make the p's bottom margin to have space as it is */
   padding: 0 18px 1px 18px;
+  /* This margin-bottom 80px + 18 to compensate for the small block stack on each other */
   margin-bottom: 98px;
   @mixin atLarge {
+    /* 1px bottom padding of the containing elem to make the p's bottom margin to have space as it is */
     padding: 0 1.8125rem 1px 1.8125rem;
+    /* For larger screen no margin-bottom to compensate the margin above */
     margin-bottom: 0;
   }
   &--last {
     margin-bottom: 0;
   }
   &__photo {
+    /* 80px because of image size is 160px; use with overflow: hidden; width and height of the image size */
     border-radius: 80px;
     overflow: hidden;
     width: 160px;
     height: 160px;
+    /* Center image horizontally */
+    /* Use margin-bottom -80px because of positive top -80px below; In short to compensate the top -80px */
     margin: 0 auto -80px auto;
+    /* To push it  outside the containg div; use positive: relative with top: -80px cuz of 160px */
     position: relative;
     top: -80px;
+    /* Just to the border */
     border: 6px solid rgba(255,255,255,.8);
   }
   &__title {

@@ -9,17 +9,21 @@
     color: $mainBlue;
   }
   &__icon {
+    /* Drop the next elem to a new line and center it => margin left and right auto*/
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: .6rem;
     @mixin atSmall {
+      /* Just give it a push down a bit using  top */
       position: relative;
       top: 8px;
+      /* margin-right and left to compensate the outside margin auto */
       margin-right: .5rem;
       margin-left: 0;
-      margin-bottom: 0;
+      /* Compensate the display block above */
       display: inline-block;
+      margin-bottom: 0;
     }
   }
 }

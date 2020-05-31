@@ -1,8 +1,12 @@
 .row {
     @mixin clearfix;
+    /* Using margin-right to compensate with padding right of child div  */
+    /* To do so we need to parent .wrapper use overflow:hidden */
     &--gutters {
+        /* Make  row--gutter 65px wider */
         margin-right: -65px;
     }
+    /* To have gutter to all direct children */
     &--gutters > div {
         padding-right: 65px;
     }
@@ -74,10 +78,14 @@
           width: 50%;
       }
    }
+   /* Begin equal height */
    &--equal-height-at-medium {
       @mixin atMedium {
+        /* 1.  For parent to display flext */
         display: flex;
       }    
+      /* 2. For children div to stretch the height by using flex display none to compensate*/
+      /* & gives row--equal-height-at-large > div */
       & > div {
         float: none;
         display: flex;

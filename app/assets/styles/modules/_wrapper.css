@@ -1,7 +1,11 @@
 .wrapper {
+    /* Used overflow below cus of children .row--gutter padding */
     overflow: hidden;
+    /* pading-left, padding-right  */
     padding-left: 18px;
     padding-right: 18px;
+    /* Set max width, margin left, margin right for auto  horizontal  center */
+    /*  1236 px  beause of padding left and right 18 box-sizing: border-box */
     max-width: 1236px;
     margin-left: auto;
     margin-right: auto;
@@ -20,10 +24,13 @@
             padding-left: 18px;
             padding-right: 18px;
         }
-    }
+    }           
+      
     &--medium {
+        /* For medium width */
         max-width: 976px;
     }
+    /* For wrapper inside wrapper => no padding left and right => after bundling .wrapper .wrapper */
     .wrapper {
         padding-left: 0;
         padding-right: 0;

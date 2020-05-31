@@ -1,3 +1,4 @@
+/* npm i postcss-mixins  --save-dev  */
 @define-mixin atSmall {
     @media (min-width: 530px) {
         @mixin-content;
@@ -20,6 +21,7 @@
     &::after {
         content: "";
         clear: both;
+        /* For extra browser supports */
         display: table;
     }
 }
