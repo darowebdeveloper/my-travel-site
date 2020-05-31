@@ -1,6 +1,8 @@
 .primary-nav {
+  /* For spacing top between the button Get in Touch and the Menu */
   padding-top: 10px;
   @mixin atMedium {
+    /* To compensate the padding-top  */
     padding-top: 0;
   }
   ul {
@@ -10,14 +12,19 @@
   }
   li {
     list-style-type: none;
+    /* To make sure list can fit on the same line */
     padding-right: 7px;
+    /* For mobile display inline block */
     display: inline-block;
+    /* Only for not mobile, float left*/
     @mixin atMedium {
       float: left;
+      /* To compensate  the inline-block and for floating left */
       display: block;
       padding-right: 20px;
     }
   }
+  /* For the last li, no padding right */
   li:last-child {
     padding-right: 0;
     @mixin atMedium {
@@ -25,20 +32,22 @@
     }
   }
   a {
-    padding: 5px 8px;
     color: #ffffff;
     text-decoration: none;
     font-size: .8rem;
     background-color: rgba($mainBlue, .5);
+    padding: 5px 8px;
     /* To make it padding: 12px 0 available use display: block */
     display: block;
     @mixin atMedium {
       padding: 12px 0;
       font-size: 1rem;
+      /* To compensate the background color rgba($mainBlue, .5) */
       background-color: transparent;
     }
   }
   &--pull-right {
+    /* Float for not mobiel screen or display normal for mobile screen */
     @mixin atMedium {
       float: right;
     }

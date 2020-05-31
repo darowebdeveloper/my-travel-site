@@ -6,6 +6,7 @@
   z-index: 2;
   /* Position absolute not full width so change width 100% */
   width: 100%;
+  /* Fade in gradually when  background-color change */
   transition: background-color .3s ease-out;
   &--is-expanded {
     /* npm i postcss-hexrgba --save-dev to use rgba($color, .55) */
@@ -15,6 +16,7 @@
     background-color: rgba($mainBlue, .3);
   }
   &__btn-container { 
+    /* Float only on not mobile screen for mobile just display normal */
     @mixin atMedium {
       float: right;
     }
@@ -38,80 +40,116 @@
     }
   }
   &__menu-content {
-    /* For small screen opacity 0; */
+    /* For small screen opacity 0 to use transition */
     opacity: 0;
-    transform: scale(1.2);
+    /* To gradually change transition */
     transition: all .3s ease-out;
+    /* Use positive:relative and z-index:-10 to make sure the element can't  be click cuz of using opacity: 0 instead of display:none */
     position: relative;
     z-index: -10;
-    padding-top: 80px;
+    /* To add zoom-out effect using transform scale */
+    transform: scale(1.2);
+    /* Push content down by padding-top: 80px to not be behind the logo*/
+    padding-top: 90px;
+    /* Make everything center */
     text-align: center;
     @mixin atMedium {
       opacity: 1;
+      /* When visible, give z-index:1 to be able to click */
       z-index: 1;
+      /* Compensate the padding-top to 0 for not mobile screen */
       padding-top: 0;
+      /* To compensate the zoom-out effect */
       transform: scale(1);
     }
     &--is-visible {
       opacity: 1;
+      /* When visible, give z-index:1 to be able to click */
       z-index: 1;
+      /* To compensate the zoom-out effect */
       transform: scale(1);
     }
   }
   &__menu-icon {
     width: 20px;
+    /* 19px because of the three menu burger lines to make perfect looking */
     height: 19px;
+    /* To position it to right */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* To compensate the menu-content when visible cuz of opacity */
+    z-index: 10;
     &::before {
+      /* To create the first burger bar */
       content: '';
+      /* To position absolute and to make at toppest left corner using top:0; left: 0; */
       position: absolute;
       top: 0;
       left: 0;
+      /* Set width 20px and height of 3px and background color of white */
       width: 20px;
       height: 3px;
       background-color: #fff;
+      /* To change transform-origin by default 50% 50% so change it to 0 0; */
       transform-origin: 0 0;
+      /* To grandually transition */
       transition: transform .3s ease-out;
     }
     &__middle {
+      /* To position absolute and to make at top left corner using top:8px; left: 0; */
       position: absolute;
       top: 8px;
       left: 0;
+      /* Set width 20px and height of 3px and background color of white */
       width: 20px;
       height: 3px;
       background-color: #fff;
-      transition: all .3s ease-out;
+      /* To change origin from the right */
       transform-origin: 0 50%;
+      /* To grandually transition becauese of transform and opacity */
+      transition: all .3s ease-out;
     }
     &::after {
+      /* To create the last burger bar */
       content: '';
+      /* To position absolute and to make at top left corner using top:16px (0 + 8px + 8px); left: 0; */
       position: absolute;
       top: 16px;
       left: 0;
+      /* Set width 20px and height of 3px and background color of white */
       width: 20px;
       height: 3px;
       background-color: #fff;
+       /* To change transform-origin by default 50% 50% so change it to 0 100; */
       transform-origin: 0 100%;
+      /* To grandually transition */
       transition: transform .3s ease-out;
     }
-    position: absolute;
-    z-index: 10;
-    top: 10px;
-    right: 10px;
     @mixin atMedium {
       /* Hide icon for larger screen */
       display: none;
     }
   }
+  /* To create a X close animation */
   &__menu-icon--close-x {
     &::before {
+      /* Rotate it 45deg but need to change the transform origin and... */
+      /* and scaleX to make bigger to fix the height*/
       transform: rotate(45deg) scaleX(1.25);
       left: -1px;
     }
+    /* Need to use this selection */
     .site-header__menu-icon__middle {
+      /* To hide the middle bar */
       opacity: 0;
+      /* ScaleX to Zero for better effect  */
       transform: scaleX(0);
     }
     &::after {
+      /* Rotate it -45deg counterclockwise but need to change the transform origin and... */
+      /* and scaleX to make bigger to fix the height*/
+      /* and translateX(-1px) to move it up */
       transform: rotate(-45deg) scaleX(1.25) translateX(-1px) ;
     }
   }
