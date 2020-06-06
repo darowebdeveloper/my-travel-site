@@ -30,6 +30,10 @@
         /* For medium width */
         max-width: 976px;
     }
+    /* For smaller wrapper used in Overlay _modal.css */
+    &--narrow {
+        max-width: 470px;
+    }
     /* For wrapper inside wrapper => no padding left and right => after bundling .wrapper .wrapper */
     .wrapper {
         padding-left: 0;

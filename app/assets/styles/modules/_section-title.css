@@ -8,6 +8,11 @@
   &--blue {
     color: $mainBlue;
   }
+  /* For smaller margin used in Overlay _modal.css */
+  &--less-margin {
+    margin-bottom: 1.3rem;
+    margin-top: 0;
+  }
   &__icon {
     /* Drop the next elem to a new line and center it => margin left and right auto*/
     display: block;

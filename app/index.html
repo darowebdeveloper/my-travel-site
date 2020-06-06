@@ -22,7 +22,8 @@
       <div class="site-header__menu-content">
         <!-- Wrap in this div to float it to the right -->
         <div class="site-header__btn-container">
-          <a href="#" class="btn">Get in Touch</a>
+          <!-- Add .open-modal for Modal.js to open the overlay modal -->
+          <a href="#" class="btn open-modal">Get in Touch</a>
         </div>
         <!-- Use different name cuz BEM allows to nest block inside a block -->
         <nav class="primary-nav primary-nav--pull-right">
@@ -54,7 +55,8 @@
         <h1 class="large-hero__title">Your clarity.</h1>
         <h2 class="large-hero__subtitle">One trip away.</h2>
         <p class="large-hero__description">We create soul restoring journeys that inspire you to be you.</p>
-        <p><a href="#" class="btn btn--orange btn--large">Get Started Today</a></p>
+        <!-- Add .open-modal for Modal.js to open the overlay modal -->
+        <p><a href="#" class="btn btn--orange btn--large open-modal">Get Started Today</a></p>
       </div>
     </div>
   </div>
@@ -202,10 +204,13 @@
     <div class="wrapper">
       <p>
         <span class="site-footer__text">Copyright &copy; 2016 Clear View Escapes. All rights reserved.</span>
-        <a href="#" class="btn btn--orange">Get in Touch</a>
+        <!-- Add .open-modal for Modal.js to open the overlay modal -->
+        <a href="#" class="btn btn--orange open-modal">Get in Touch</a>
       </p>
     </div>
   </footer>
+  <!-- Modal box -->
+  <!-- Put the modal html into the Modal.js -->
   <!-- Link to the bundled js file -->
   <script src="bundled.js"></script>
 </body>
