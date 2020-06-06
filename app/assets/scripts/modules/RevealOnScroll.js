@@ -26,12 +26,12 @@ class RevealOnScroll {
     // But resize event trigger many times by different browsers...
     // so we can use debounce from lodash to help prevent those many times
     window.addEventListener('resize', debounce(() => {
-      console.log('Resize just ran');
+      // console.log('Resize just ran');
       this.browserHeight = window.innerHeight;
     }, 333));
   }
   calCaller() {
-    console.log("Scroll function ran");
+    // console.log("Scroll function ran");
     this.itemsToReveal.forEach((item) => {
       // Only items not yet reveal, then do the calculation
       if(item.isRevealed == false) {
@@ -46,7 +46,7 @@ class RevealOnScroll {
     // item.offsetTop is static and measured from the top of viewport to the top of item
     // Calling window.innerHeight every scroll not efficient => so create a property to hold its value
     if(window.scrollY + this.browserHeight > item.offsetTop) {
-      console.log("Ele was calculated");
+      // console.log("Ele was calculated");
       // .getBoundingClientRect().top changes and returns how far the top of item to the top of the bounding box (viewport)
       // The fomular below means when the item scroll to the 25% from the bottom viewport
       let scrollPercent =
