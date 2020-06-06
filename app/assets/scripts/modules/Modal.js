@@ -5,16 +5,19 @@ class Modal {
     this.injectHTML();
     this.modal = document.querySelector('.modal');
     this.closeIcon = document.querySelector('.modal__close');
-    this.openModalButtons = document.querySelectorAll('.open-modal');
+    // Do not the following line because we load modal only when click
+    // this.openModalButtons = document.querySelectorAll('.open-modal');
     this.events();
   }
   events() {
     // Listen for open click
-    this.openModalButtons.forEach(button => {
-      button.addEventListener('click', (e) => {
-        this.openTheModal(e);
-      });
-    });
+    // Disable below because we load modal only when click
+    // this.openModalButtons.forEach(button => {
+    //   button.addEventListener('click', (e) => {
+    //     this.openTheModal(e);
+    //   });
+    // });
+
     // Listen for closing click
     this.closeIcon.addEventListener('click', (button) => {
       this.closeTheModal();
@@ -28,9 +31,10 @@ class Modal {
       this.closeTheModal();
     }
   }
-  openTheModal(e) {
+  openTheModal() {
     // To prevent the # click defaul behavior
-    e.preventDefault();
+    // Because we load modal only when we do not need e;
+    // e.preventDefault();
     this.modal.classList.add('modal--is-visible');
   }
   closeTheModal() {
