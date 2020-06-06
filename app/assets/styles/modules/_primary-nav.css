@@ -44,6 +44,10 @@
       font-size: 1rem;
       /* To compensate the background color rgba($mainBlue, .5) */
       background-color: transparent;
+      /* For StickyHeader.js */
+      &.is-current-link {
+        color: #fabb69;
+      }
     }
   }
   &--pull-right {

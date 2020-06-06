@@ -27,9 +27,10 @@
         <!-- Use different name cuz BEM allows to nest block inside a block -->
         <nav class="primary-nav primary-nav--pull-right">
           <ul>
-            <li><a href="#our-beginning">Our Beginning</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
+            <!-- Add id for StickyHeader.js highlighting -->
+            <li><a id="our-beginning-link" href="#our-beginning">Our Beginning</a></li>
+            <li><a id="our-features-link" href="#features">Features</a></li>
+            <li><a id="our-testimonials-link" href="#testimonials">Testimonials</a></li>
           </ul>
         </nav>
       </div>
@@ -57,8 +58,8 @@
       </div>
     </div>
   </div>
-
-  <div id="our-beginning" class="page-section">
+<!-- data-matching-link for StickyHeader.js to highlighing when scrolling -->
+  <div id="our-beginning" class="page-section" data-matching-link="#our-beginning-link">
     <div class="wrapper">
       <h2 class="headline headline--centered headline--b-margin-small headline--light">The first trip we planned <strong>was our own.</strong></h2>
       <h3 class="headline headline--centered headline--b-margin-large headline--light headline--orange headline--small headline--narrow">Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
@@ -98,8 +99,8 @@
       </div>
     </div>
   </div>
-
-  <div id="features" class="page-section page-section--blue">
+<!-- data-matching-link for StickyHeader.js to highlighing when scrolling -->
+  <div id="features" class="page-section page-section--blue" data-matching-link="#our-features-link">
     <div class="wrapper">
       <h2 class="section-title">
         <img class="section-title__icon" src="assets/images/icons/star.svg">
@@ -143,7 +144,8 @@
     </div>
   </div>
   <!-- .page-section--no-b-padding-until-large for no padding bottom -->
-  <div id="testimonials" class="page-section page-section--no-b-padding-until-large page-section--testimonials">
+  <!-- data-matching-link for StickyHeader.js to highlighing when scrolling -->
+  <div id="testimonials" class="page-section page-section--no-b-padding-until-large page-section--testimonials" data-matching-link="#our-testimonials-link">
     <!-- No padding for small screen and padding when large -->
     <div class="wrapper wrapper--no-padding-until-large">
       <h2 class="section-title section-title--blue">

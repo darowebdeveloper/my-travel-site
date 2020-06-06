@@ -4,9 +4,12 @@ import '../styles/styles.css';
 // Import modular js to the file
 import MobileMenu from './modules/MobileMenu';
 import RevealOnScroll from './modules/RevealOnScroll';
+import StickyHeader from './modules/StickyHeader';
+
 // Create the object
 new RevealOnScroll(document.querySelectorAll('.feature-item'), 75 );
 new RevealOnScroll(document.querySelectorAll(".testimonial"), 60);
+let stickyHeader = new StickyHeader();
 let mobileMenu = new MobileMenu();
 
 // For hot module replacement with webpack-dev-server

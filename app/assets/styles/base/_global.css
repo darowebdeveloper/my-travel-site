@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
 }
+html {
+    /* For smooth scrolling when select the link in the menu */
+    scroll-behavior: smooth;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #333333;

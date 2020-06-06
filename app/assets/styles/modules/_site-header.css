@@ -14,6 +14,12 @@
   }
   @mixin atMedium {
     background-color: rgba($mainBlue, .3);
+    /* Run with StickyHeader.js  */
+    position: fixed;
+    /* Add darker blue */
+    &--dark {
+      background-color: rgba(23, 51, 72, .85);
+    }
   }
   &__btn-container { 
     /* Float only on not mobile screen for mobile just display normal */
@@ -31,12 +37,18 @@
     transform: translateX(-50%);
     background-color: $mainBlue;
     padding: 13px 29px;
-    
+    /* Use with StickyHeader.js */
+    transform-origin: 50% 0;
+    transition: transform .3s ease-out;
     @mixin atMedium {
       /* For  larger screen left to auto and transform to 0 to compensate */
       left: auto;
-      transform: translateX(0);
       padding: 25px 36px;
+      transform: translateX(0);
+      /* Use with StickyHeader.js for the logo */
+      .site-header--dark & {
+        transform: scale(.54);
+      }
     }
   }
   &__menu-content {
