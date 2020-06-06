@@ -1,6 +1,8 @@
 // Import style.css for webpack to bundle the css file <=> add config to webpack
 // When ready for productions, will export css to its own files
 import '../styles/styles.css';
+// Load npm i lazysizes for lazy-load images
+import 'lazysizes';
 // Import modular js to the file
 import MobileMenu from './modules/MobileMenu';
 import RevealOnScroll from './modules/RevealOnScroll';

@@ -67,18 +67,20 @@
       <h3 class="headline headline--centered headline--b-margin-large headline--light headline--orange headline--small headline--narrow">Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
       <div class="wrapper wrapper--medium wrapper--b-margin">
         <!-- For resolution and size direction -->
-        <img sizes="(min-width: 970px) 976px, 100vw" srcset="assets/images/first-trip-low-res-i.jpg 565w, assets/images/first-trip-i.jpg 976w, assets/images/first-trip-hi-dpi-i.jpg 1952w" alt="Couple walking down a street.">
+        <!-- Add .lazyload  and change srcset to data-srcset for npm i lazysizes to laod images -->
+        <img class="lazyload" sizes="(min-width: 970px) 976px, 100vw" data-srcset="assets/images/first-trip-low-res-i.jpg 565w, assets/images/first-trip-i.jpg 976w, assets/images/first-trip-hi-dpi-i.jpg 1952w" alt="Couple walking down a street.">
       </div>
       <div class="row row--gutters">
         <div class="row__medium-4 row__medium-4--larger row__b-margin-until-medium">
           <!-- Art direction -->
           <picture>
             <!-- For responsive images all browsers will make  images full width, so use sizes to control the  partial width -->
-            <source sizes="404px" srcset="assets/images/our-start-i.jpg 404w, assets/images/our-start-hi-dpi-i.jpg 808w" media="(min-width: 1020px)">
-            <source sizes="320px" srcset="assets/images/our-start-portrait-i.jpg 382w, assets/images/our-start-portrait-hi-dpi-i.jpg 764w" media="(min-width: 800px)">
+            <!-- Add .lazyload  and change srcset to data-srcset for npm i lazysizes to laod images -->
+            <source sizes="404px" data-srcset="assets/images/our-start-i.jpg 404w, assets/images/our-start-hi-dpi-i.jpg 808w" media="(min-width: 1020px)">
+            <source sizes="320px" data-srcset="assets/images/our-start-portrait-i.jpg 382w, assets/images/our-start-portrait-hi-dpi-i.jpg 764w" media="(min-width: 800px)">
             <!-- srcset for <img /> should be the  smallest first -->
             <!-- We don't use  sizes  because  the images take full  width for small screen -->
-            <img srcset="assets/images/our-start-landscape-i.jpg 800w, assets/images/our-start-landscape-hi-dpi-i.jpg 1600w" alt="Our founder, Mary Doe">
+            <img class="lazyload" data-srcset="assets/images/our-start-landscape-i.jpg 800w, assets/images/our-start-landscape-hi-dpi-i.jpg 1600w" alt="Our founder, Mary Doe">
           </picture>
         </div>
         <div class="row__medium-8 row__medium-8--smaller">
@@ -161,7 +163,8 @@
           <div class="testimonial">
             <!-- For circular image wrap img in side this div -->
             <div class="testimonial__photo">
-              <img sizes="160px" srcset="assets/images/testimonial-jane.jpg 160w, assets/images/testimonial-jane-hi-dpi.jpg 320w" alt="Jane Doe">
+              <!-- Add .lazyload  and change srcset to data-srcset for npm i lazysizes to laod images -->
+              <img class="lazyload" sizes="160px" data-srcset="assets/images/testimonial-jane.jpg 160w, assets/images/testimonial-jane-hi-dpi.jpg 320w" alt="Jane Doe">
             </div>
             <h3 class="testimonial__title">Jane Doe</h3>
             <h4 class="testimonial__subtitle">9 Time Escaper</h4>
@@ -174,7 +177,8 @@
         <div class="row__large-4">
           <div class="testimonial">
             <div class="testimonial__photo">
-              <img sizes="160px" srcset="assets/images/testimonial-john.jpg 160w, assets/images/testimonial-john-hi-dpi.jpg 320w" alt="Jonh Smith">
+              <!-- Add .lazyload  and change srcset to data-srcset for npm i lazysizes to laod images -->
+              <img class="lazyload" sizes="160px" data-srcset="assets/images/testimonial-john.jpg 160w, assets/images/testimonial-john-hi-dpi.jpg 320w" alt="Jonh Smith">
             </div>
             <h3 class="testimonial__title">John Smith</h3>
             <h4 class="testimonial__subtitle">Time Escaper</h4>
@@ -187,7 +191,8 @@
           <!-- .testimonail--last to remove margin-bottom -->
           <div class="testimonial testimonial--last">
             <div class="testimonial__photo">
-              <img sizes="160px" srcset="assets/images/testimonial-cat-i.jpg 160w, assets/images/testimonial-cat-hi-dpi-i.jpg 320w" alt="Cat">
+              <!-- Add .lazyload  and change srcset to data-srcset for npm i lazysizes to laod images -->
+              <img class="lazyload" sizes="160px" data-srcset="assets/images/testimonial-cat-i.jpg 160w, assets/images/testimonial-cat-hi-dpi-i.jpg 320w" alt="Cat">
             </div>
             <h3 class="testimonial__title">Cat McKitty</h3>
             <h4 class="testimonial__subtitle">6 Time Escaper</h4>
