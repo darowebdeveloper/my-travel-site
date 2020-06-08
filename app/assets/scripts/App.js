@@ -9,6 +9,14 @@ import RevealOnScroll from './modules/RevealOnScroll';
 import StickyHeader from './modules/StickyHeader';
 import ClientArea from './modules/ClientArea';
 
+// Code for React by npm i react react-dom
+import React from 'react';
+import ReactDOM from 'react-dom';
+// Import React components
+import MyAmazingComponent from './modules/MyAmazingComponent';
+
+ReactDOM.render(<MyAmazingComponent />, document.querySelector('#my-react-example'));
+
 // Create the object
 new ClientArea();
 new RevealOnScroll(document.querySelectorAll('.feature-item'), 75 );

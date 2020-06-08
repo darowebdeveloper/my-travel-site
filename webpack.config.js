@@ -67,7 +67,19 @@ let config = {
   // Where to put additional plugins for webpacks like css
   module: {
     rules: [
-      cssConfig
+      cssConfig,
+      // For React using npm i @babel/preset-react --save-dev
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            // Add @babel/preset-react
+            presets: ['@babel/preset-react','@babel/preset-env']
+          }
+        }
+      }
     ],
   },
 };
@@ -103,16 +115,16 @@ if(currentTask == 'dev') {
 if (currentTask == "build") {
   // Use babel loader to ensure old browser compatability
   // npm install @babel/core @babel/preset-env babel-loader --save-dev
-  config.module.rules.push({
-    test: /\.js$/,
-    exclude: /(node_modules)/,
-    use: {
-      loader: 'babel-loader',
-      options: {
-        presets: ['@babel/preset-env']
-      }
-    }
-  });
+  // config.module.rules.push({
+  //   test: /\.js$/,
+  //   exclude: /(node_modules)/,
+  //   use: {
+  //     loader: 'babel-loader',
+  //     options: {
+  //       presets: ['@babel/preset-env']
+  //     }
+  //   }
+  // }); // Before adding React.js
   // Extract css to its own files
   cssConfig.use.unshift(MiniCssExtractPlugin.loader);
   // npm install cssnano --save-dev to minify the css extracted files
